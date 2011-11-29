@@ -1,11 +1,11 @@
 # node-control-port
 	
-	A TCP based control port for node processes
+  A TCP based control port for node processes
 
 
 ## Usage
-	
-	Code:	
+
+  Code:	
 		var control = new ControlPort();
 		control.start(6000);
 		
@@ -22,7 +22,7 @@
 		});
 	
 
-	In action:
+  In action:
 		
 		$ nc localhost 6000
 		Node> menu
@@ -36,11 +36,11 @@
 
 
 ## Features
-	Set your own Prompt
+  Set your own Prompt
 		
 		var control = new ControlPort('Server4');
 		
-	Auto Argument parsing
-		arg1, arg2, and arg3 will be passed to command's callback
+  Auto argument parsing:
+  arg1, arg2, and arg3 will be passed to command's callback
 			Node> command arg1 arg2 arg3
 		
