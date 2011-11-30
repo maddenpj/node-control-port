@@ -42,6 +42,6 @@
 		var control = new ControlPort('Server4');
 		
   Auto argument parsing:
-		
-		arg1, arg2, and arg3 will be passed to command callback
-		Node> command arg1 arg2 arg3		
+  arg1, arg2, and arg3 will be passed to command callback
+	
+	Node> command arg1 arg2 arg3		
