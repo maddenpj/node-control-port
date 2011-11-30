@@ -43,6 +43,7 @@ ControlPort.prototype.handler = function (data,socket) {
 ControlPort.prototype.addToMenu = function (name, args,descrip) {
 	var command = '  '+name;
 	for(var i = 0; i < args.length; i++) {
+		if(args[i] === '') continue;
 		command += ' <'+args[i]+'>';
 	}
 	command += ' - '+descrip;
