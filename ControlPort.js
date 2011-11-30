@@ -5,7 +5,7 @@ function ControlPort(prompt_) {
 	
 	this.prompt = '\033[1;33m'+p+'> \033[22;39m';
 	this.commands = {};
-	this.menu = '---- Menu ----\n';
+	this.menu = '---- Menu ----\n\n';
 }
 
 
