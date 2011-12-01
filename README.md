@@ -45,6 +45,14 @@
 
 * Auto Menu Generation!
 
+  	Don't like the built in menu? Just register a new one!
+
+* Don't like Yellow? 
+	
+	Change it!
+		
+		control.color = 'red'; //or blue, cyan, green, magenta, yellow, white
+
 * Auto argument parsing:
     
 	arg1, arg2, and arg3 will be passed to command callback
