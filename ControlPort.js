@@ -70,7 +70,9 @@ ControlPort.prototype.register = function(name, callback, descrip) {
 
 function extractArguments (string) {
 	string = string.replace('function','');
-	var args =	string.substring(0,string.search('{')).replace(/^\s+\(/g,'').replace(/\)\s+$/g, '').split(',');
+	console.log(string);
+	console.log(string.substring(0,string.search('{')));
+	var args =	string.substring(0,string.search('{')).replace(/^\s*\(/g,'').replace(/\)\s*$/g, '').split(',');
 	for(var i = 0; i < args.length; i++) {
 		args[i] = args[i].replace(/^\s+/g,'').replace(/\s+$/g,'');
 	}
@@ -84,7 +86,9 @@ blue   : '\033[1;34m',
 cyan   : '\033[1;36m',
 green  : '\033[1;32m',
 magenta: '\033[1;35m',
-red    : '\033[1;31m'
+red    : '\033[1;31m',
+white  : '\033[1;37m',
+grey   : '\033[1;90m'
 };
 
 
