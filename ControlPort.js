@@ -70,8 +70,6 @@ ControlPort.prototype.register = function(name, callback, descrip) {
 
 function extractArguments (string) {
 	string = string.replace('function','');
-	console.log(string);
-	console.log(string.substring(0,string.search('{')));
 	var args =	string.substring(0,string.search('{')).replace(/^\s*\(/g,'').replace(/\)\s*$/g, '').split(',');
 	for(var i = 0; i < args.length; i++) {
 		args[i] = args[i].replace(/^\s+/g,'').replace(/\s+$/g,'');
