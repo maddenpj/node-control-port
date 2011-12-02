@@ -6,6 +6,7 @@
 ## Usage
 
   Code:	
+	
 	var ControlPort = require('control-port').ControlPort;
 	
 	var control = new ControlPort();
