@@ -15,7 +15,7 @@
 	},'Adds two numbers');
 	control.register('shutdown', function () {
 		process.exit(0);
-	}'Shuts down process');
+	},'Shuts down process');
 	
 
   In action:
@@ -51,7 +51,7 @@
 	
 	Change it!
 		
-		control.color = 'red'; //or blue, cyan, green, magenta, yellow, white
+		control.color = 'red'; //or blue, cyan, green, magenta, yellow, white, grey
 
 * Auto argument parsing:
     
