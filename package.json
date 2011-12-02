@@ -1,0 +1,14 @@
+{
+    "name": "control-port",
+    "description": "A TCP based control port for node processes",
+    "version": "0.1.0",
+    "author": "Patrick Madden",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/maddenpj/node-control-port.git"
+    },
+    "engine": {
+		"node" : "*"
+	},
+    "main": "ControlPort.js"
+}
