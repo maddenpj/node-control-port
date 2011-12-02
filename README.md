@@ -6,7 +6,8 @@
 ## Usage
 
   Code:	
-		
+	var ControlPort = require('control-port').ControlPort;
+	
 	var control = new ControlPort();
 	control.start(6000);
 		
@@ -32,6 +33,11 @@
 	5
 	Node> shutdown
 	$
+
+## Install
+  
+  Install with npm
+  	$ npm install control-port
 
 
 ## Features
