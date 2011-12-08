@@ -78,6 +78,7 @@ function extractArguments (string) {
 }
 
 //Available Colors
+
 var Colors = {
 yellow : '\033[1;33m',
 blue   : '\033[1;34m',
