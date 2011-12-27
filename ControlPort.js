@@ -25,12 +25,7 @@ ControlPort.prototype.start = function (port) {
 	});
 }
 
-function colorizePrompt(prompt,color) {
-	if(Colors[color] === undefined) {
-		color = 'yellow'
-	}
-	return Colors[color] + prompt;
-}
+
 
 ControlPort.prototype.handler = function (data,socket) { 
 	var parse = data.toString().substring(0, data.length-1).split(/\s+/g);
@@ -42,6 +37,9 @@ ControlPort.prototype.handler = function (data,socket) {
 		socket.write('\n'+colorizePrompt(this.prompt,this.color));
 		return;
 	}
+	
+	detectTypes(parse);
+	console.log(parse);
 	var out = this.commands[command].apply(this, parse); 
 	socket.write(out+'\n'+colorizePrompt(this.prompt,this.color));
 }
@@ -68,6 +66,25 @@ ControlPort.prototype.register = function(name, callback, descrip) {
 	}
 }
 
+
+//Helper functions 
+
+
+function detectTypes (args) {
+	
+	for(var i = 0; i < args.length; i++) {
+		if(typeof args[i] == 'object') continue;
+		
+		//TODO: this won't detect cases of NumString. parseFloat() chops String and returns Num
+		if(typeof args[i] == 'string') {
+			if(!isNaN(parseFloat(args[i]))) {
+				args[i] = parseFloat(args[i]);
+			}
+		}
+	}
+}
+
+
 function extractArguments (string) {
 	string = string.replace('function','');
 	var args =	string.substring(0,string.search('{')).replace(/^\s*\(/g,'').replace(/\)\s*$/g, '').split(',');
@@ -76,6 +93,14 @@ function extractArguments (string) {
 	}
 	return args;
 }
+
+function colorizePrompt(prompt,color) {
+	if(Colors[color] === undefined) {
+		color = 'yellow'
+	}
+	return Colors[color] + prompt;
+}
+
 
 //Available Colors
 
