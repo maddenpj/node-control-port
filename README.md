@@ -30,6 +30,8 @@
 	  
 	  shutdown - Shuts down process
 	  
+	  
+	  
 	Node> add 2 3
 	5
 	Node> shutdown
@@ -61,7 +63,7 @@
 		
 		control.color = 'red'; //or blue, cyan, green, magenta, yellow, white, grey
 
-* Auto argument parsing:
+* Auto argument parsing & type detection:
     
 	arg1, arg2, and arg3 will be passed to command callback
 	
