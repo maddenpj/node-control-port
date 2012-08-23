@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/maddenpj/node-control-port.png)](http://travis-ci.org/maddenpj/node-control-port)
 # node-control-port
 	
   A TCP based control port for node processes
